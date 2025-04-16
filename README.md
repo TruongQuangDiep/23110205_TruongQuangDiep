@@ -34,4 +34,4 @@
 ![BeamSearch](gif_files/BeemSearch.gif)
 
 ### Generatic Algorithm
-![GeneraticAlgorithm](gif_files/Generatic Algorithm.gif)
+![GeneraticAlgorithm](gif_files/GeneraticAlgorithm.gif)
