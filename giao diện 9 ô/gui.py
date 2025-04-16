@@ -105,12 +105,6 @@ def run_beam_search():
     output_text.config(state=tk.DISABLED)
     solve_puzzle_beam_search(start, x, y, 3, update_display)
     
-def run_genetic_algorithm():
-    output_text.config(state=tk.NORMAL)
-    output_text.delete("1.0", tk.END)
-    output_text.config(state=tk.DISABLED)
-    solve_puzzle_genetic_algorithm(start, x, y, update_display)
-    
 def run_stochastic_hill_climbing():
     output_text.config(state=tk.NORMAL)
     output_text.delete("1.0", tk.END)
@@ -335,9 +329,8 @@ def compare_click():
     solve_puzzle_steepest_ascent(start, x, y, lambda text: (text_widgets_output[7].insert(tk.END, text + "\n"),text_widgets_output[7].see(tk.END)))
     solve_puzzle_simulated_annealing(start, x, y, lambda text: (text_widgets_output[8].insert(tk.END, text + "\n"),text_widgets_output[8].see(tk.END)))
     solve_puzzle_beam_search(start, x, y, 3, lambda text: (text_widgets_output[9].insert(tk.END, text + "\n"),text_widgets_output[9].see(tk.END)))
-    solve_puzzle_genetic_algorithm(start, x, y, lambda text: (text_widgets_output[10].insert(tk.END, text + "\n"),text_widgets_output[10].see(tk.END)))
-    solve_puzzle_stochastic(start, x, y, lambda text: (text_widgets_output[11].insert(tk.END, text + "\n"),text_widgets_output[11].see(tk.END)))
-    solve_puzzle_and_or(start, x, y, lambda text: (text_widgets_output[12].insert(tk.END, text + "\n"),text_widgets_output[12].see(tk.END)))
+    solve_puzzle_stochastic(start, x, y, lambda text: (text_widgets_output[10].insert(tk.END, text + "\n"),text_widgets_output[10].see(tk.END)))
+    solve_puzzle_and_or(start, x, y, lambda text: (text_widgets_output[11].insert(tk.END, text + "\n"),text_widgets_output[11].see(tk.END)))
     #solve_puzzle_dfs(start, x, y, lambda text: (text_widgets_output[6].insert(tk.END, text + "\n"),text_widgets_output[6].see(tk.END)))
         
 def restore_main_text_widget():
@@ -613,7 +606,7 @@ btn_simulated_annealing = tk.Button(button_frame, image=img_simulated_annealing,
 btn_simulated_annealing.pack(side=tk.LEFT, padx=10)
 
 img_genetic_algorithm = PhotoImage(file=r"D:\đồ án trí tuệ nhân tạo cá nhân\giao diện 9 ô\giao diện 8 puzzle png\Genetic Algorithm.png")
-btn_genetic_algorithm = tk.Button(button_frame, image=img_genetic_algorithm, command=lambda: (restore_main_text_widget(), run_genetic_algorithm(), solve_puzzle_genetic_algorithm_giao_dien(start, x, y)))
+btn_genetic_algorithm = tk.Button(button_frame, image=img_genetic_algorithm, command=lambda: (restore_main_text_widget(), run_generatic_annealing()))
 btn_genetic_algorithm.pack(side=tk.LEFT, padx=10)
 
 img_and_or_graph = PhotoImage(file=r"D:\đồ án trí tuệ nhân tạo cá nhân\giao diện 9 ô\giao diện 8 puzzle png\AND-OR_GRAPH.png")

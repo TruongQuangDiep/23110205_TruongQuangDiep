@@ -22,7 +22,7 @@ def and_or_graph_search_core(start, x, y, display_mode=None, update_display=None
                 result = AND_OR_GRAPH_SEARCH(new_state, nx, ny, path + [state_key])
                 if result:
                     return [state] + result
-
+        path.remove(state_key)
         return None
 
     result = AND_OR_GRAPH_SEARCH(start, x, y, [])
